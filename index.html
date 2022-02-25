@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Traveleeka.</title>
+        <!-- Boxicons -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <!-- Main Style -->
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header id="header" class="header">
+            <nav id="nav" class="nav nav__container">
+                <div class="nav__logo">
+                    Traveleeka<span class="nav__logo-dot">.</span>
+                </div>
+                <div class="nav__menu" id="nav-menu">
+                    <div class="nav__list">
+                        <p class="nav__item">
+                            <a class="nav__link" href="#home">Booking</a>
+                        </p>
+                        <p class="nav__item">
+                            <a class="nav__link" href="#packages">Packages</a>
+                        </p>
+                        <p class="nav__item">
+                            <a class="nav__link" href="#rooms"
+                                >Rooms & Suites</a
+                            >
+                        </p>
+                        <p class="nav__item">
+                            <a class="nav__link" href="#reviews">Reviews</a>
+                        </p>
+                        <div class="nav__theme" id="nav-theme">
+                            <i class="nav__link bx bx-moon" id="theme-icon"></i>
+                        </div>
+                        <div class="nav__close" id="nav-close">
+                            <i class="bx bx-x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="bx bx-menu"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- HERO -------------------->
+            <section id="hero" class="section hero">
+                <div class="hero__container">
+                    <div class="hero__data">
+                        <div class="section__titles">
+                            <h2 class="section__titles-title">
+                                Dare to live the live <br />
+                                You've always wanted
+                            </h2>
+                            <p class="section__titles-subtitle">
+                                Explore the world
+                            </p>
+                        </div>
+                        <!-- <p class="hero__data-subtitle">Explore the world</p>
+                        <h2 class="hero__data-title">
+                            Dare to live the live <br />
+                            You've always wanted.
+                        </h2> -->
+                        <p class="hero__data-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque sint quam quae ipsam eveniet, labore
+                            omnis quas voluptas necessitatibus ut ommodi unde
+                            earum
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BOOKING FORM -------------------->
+            <section id="booking" class="section booking">
+                <div class="section__titles">
+                    <h2 class="section__titles-title">Book your holiday</h2>
+                    <p class="section__titles-subtitle">
+                        Find great deals near you
+                    </p>
+                </div>
+                <div class="booking__container">
+                    <div class="booking__box box-1">
+                        <label class="booking__box-label" for="destination"
+                            >Destination</label
+                        >
+                        <select
+                            class="booking__box-select"
+                            name="destination"
+                            id="destination"
+                        >
+                            <option value="kuta">Kuta</option>
+                            <option value="seminyak">Seminyak</option>
+                            <option value="canggu">Canggu</option>
+                            <option value="ubud">Ubud</option>
+                            <option value="uluwatu">Uluwatu</option>
+                        </select>
+                    </div>
+                    <div class="booking__box box-2">
+                        <label class="booking__box-label" for="duration"
+                            >Duration</label
+                        >
+                        <select
+                            class="booking__box-select"
+                            name="duration"
+                            id="duration"
+                        >
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                    </div>
+                    <div class="booking__box box-3">
+                        <label class="booking__box-label" for="checkin"
+                            >Check in</label
+                        >
+                        <select
+                            class="booking__box-select"
+                            name="checkin"
+                            id="checkin"
+                        >
+                            <option value="tuesday">Tue, 1 Mar 2022</option>
+                            <option value="wednesday">Wed, 2 Mar 2022</option>
+                            <option value="thursday">Thu, 3 Mar 2022</option>
+                            <option value="friday">Fri, 4 Mar 2022</option>
+                            <option value="saturday">Sat, 5 Mar 2022</option>
+                            <option value="sunday">Sun, 6 Mar 2022</option>
+                            <option value="monday">Mon, 7 Mar 2022</option>
+                        </select>
+                    </div>
+                    <div class="booking__box">
+                        <label class="booking__box-label box-4" for="checkout"
+                            >Check out</label
+                        >
+                        <select
+                            class="booking__box-select"
+                            name="checkin"
+                            id="checkin"
+                        >
+                            <option value="wednesday">Wed, 2 Mar 2022</option>
+                            <option value="thursday">Thu, 3 Mar 2022</option>
+                            <option value="friday">Fri, 4 Mar 2022</option>
+                            <option value="saturday">Sat, 5 Mar 2022</option>
+                            <option value="sunday">Sun, 6 Mar 2022</option>
+                            <option value="monday">Mon, 7 Mar 2022</option>
+                            <option value="tuesday">Tue, 8 Mar 2022</option>
+                        </select>
+                    </div>
+
+                    <div class="booking__button">
+                        <p class="booking__button-text">Book Now</p>
+                        <span class="booking__button-arrow"
+                            ><i class="bx bx-right-arrow-alt"></i
+                        ></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIDEO -------------------->
+            <!-- TRIP PACKAGES -------------------->
+            <section class="trip">TRIP</section>
+            <!-- ROOM & SUITES -------------------->
+            <!-- REVIEWS -------------------->
+            <!-- FOOTER -------------------->
+        </main>
+
+        <script src="app.js"></script>
+    </body>
+</html>
