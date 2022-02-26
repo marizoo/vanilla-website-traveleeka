@@ -223,7 +223,6 @@ img{
 }
 
 
-
 /* EDITING STARTS BELOW =========================================== */
 
 /* HEADER ============================= */
@@ -256,6 +255,8 @@ img{
     justify-content: center;
     cursor: pointer;
     height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nav__logo-dot{
@@ -402,8 +403,8 @@ line-height: 400%;
 
 /* HERO ============================= */
 .hero{
-    height: 70vh;
-    width: 100vw;
+    height: 50vh;
+    width: 100%;
     background: rgba(240, 128, 128, 0.212);
     display: flex;
     align-items: center;
@@ -419,29 +420,17 @@ line-height: 400%;
 .hero__data{
     margin-top: 1rem;
 }
-/* 
-.hero__data-subtitle{
-    margin-bottom: .5rem;
-    color: var(--color-brand);
-}
 
-.hero__data-title{
-    font-size: var(--fz-h2);
-    line-height: 95%;
-    margin-bottom: 1rem;
-} */
 
 .hero__data-desc{
-    max-width: 80%;
+    max-width: 90%;
     font-size: var(--fz-normal);
     line-height: 110%;
     letter-spacing: .7px;
 }
 
 @media screen and (min-width: 413px){
-    .hero{
-        height: 70vh;
-    }
+   
 
     .hero__data{
         margin-top: 1rem;
@@ -450,9 +439,7 @@ line-height: 400%;
 
 
 @media screen and (min-width: 576px){
-    .hero{
-        height: 70vh;
-    }
+   
 
     .hero__data-title{
         margin-bottom: 1.1rem;
@@ -464,9 +451,7 @@ line-height: 400%;
 }
 
 @media screen and (min-width: 768px){
-    .hero{
-        height: 70vh;
-    }
+    
     
     .hero__data{
         margin-top: 2.5rem;
@@ -478,9 +463,7 @@ line-height: 400%;
 }
 
 @media screen and (min-width: 992px){
-    .hero{
-        height: 70vh;
-    }
+    
 
     .hero__data{
         margin-top: 4rem;
@@ -492,9 +475,7 @@ line-height: 400%;
 }
 
 @media screen and (min-width: 1200px){
-    .hero {
-        height: 70vh;
-    }
+    
 
     .hero__data{
         margin-top: 4rem;
@@ -575,13 +556,6 @@ padding-left: .5rem;
     transform: translateX(4px);
 }
 
-
-
-@media screen and (min-width: 413px){}
-
-@media screen and (min-width: 549px){}
-
-@media screen and (min-width: 576px){}
 
 @media screen and (min-width: 768px){
     .box-1{ grid-area: box1; }
@@ -673,18 +647,11 @@ padding-left: .5rem;
 .trip__cards-container{
     width: 100%;
     height: 100%;
-    /* display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: 
-    "card1" 
-    "card2"
-    "card3"
-    ; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    gap: 2rem;
+    justify-content: center;
 }
 
 
@@ -734,7 +701,6 @@ padding-left: .5rem;
     position: absolute;
     bottom: 0;
     left: 0;
-    /* background: lightgray; */
     width: 100%;
     height:55px;
     display: grid;
@@ -896,6 +862,8 @@ padding-left: .5rem;
     background: lightsalmon;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
+
 }
 
 .room__card-big-img{
@@ -941,7 +909,6 @@ padding-left: .5rem;
     position: relative;
     cursor: pointer;
     overflow: hidden;
-   
 }
 
 .room__card-small-data-container{
@@ -1105,7 +1072,6 @@ padding-left: .5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .footer__container{
@@ -1118,6 +1084,9 @@ padding-left: .5rem;
 .footer__title{
     text-align: center;
     margin-bottom: 2rem;
+    font-size: var(--fz-h2);
+    font-weight: var(--fw-bold);
+    letter-spacing: 1px;
 }
 
 /* Footer Subscribe-------------- */
@@ -1129,7 +1098,6 @@ padding-left: .5rem;
     display: flex;
     align-items: center;
     background: var(--color-bg-1);
-
 }
 
 .footer__input{
@@ -1158,54 +1126,107 @@ padding-left: .5rem;
     background-color: var(--color-brand-dark);
 }
 
-/* Footer Copyright -------------- */
-
-.footer__copyrights{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer__copyright-logo{
+/* Footer Logo */
+.footer__logo{
     margin-bottom: 2rem;
-
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.footer__logo span{
+    color: var(--color-brand);
+    font-size: var(--fz-largest);
+    display: inline-block;
 }
 
-.footer__copyright-detail{
-    text-align: center;
-    margin-bottom: 2rem;
-
-}
-
-.footer__copyright-socials{
+/* Footer Socials */
+.footer__socials{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
+    font-size: var(--fz-h2);
 }
 
-.footer__copyright-socials i{
+.footer__socials i{
     margin: 0 1rem;
     cursor: pointer;
     transition: 0.4s ease;
     cursor: pointer;
 }
 
-.footer__copyright-socials i:hover{
+.footer__socials i:hover{
     color: var(--color-brand);
     scale: 1.2;
 }
 
-@media screen and (min-width: 413px){}
+/* Footer Copyright */
+.footer__copyright{
+    text-align: center;
+    font-size: var(--fz-smaller);
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+    color: var(--color-text-light);
+}
 
-@media screen and (min-width: 549px){}
+.footer__copyright p:nth-child(1){
+    margin-right: 2px;
+}
 
-@media screen and (min-width: 576px){}
 
-@media screen and (min-width: 768px){}
+@media screen and (min-width: 549px){
+    .footer__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "footTitle footSubscribe"
+        "footLogo footSocial"
+        "footCopy footCopy"
+        ;
+        column-gap: 2rem;
+    }
 
-@media screen and (min-width: 992px){}
+    .footer__title{ grid-area: footTitle; }
 
-@media screen and (min-width: 1200px){}
+    .footer__subscribe{ grid-area: footSubscribe; }
+
+    .footer__logo{ 
+        grid-area: footLogo;  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer__logo span{
+        margin-bottom: .7rem;
+    }
+
+    .footer__socials{ 
+        grid-area: footSocial; 
+    }
+
+    .footer__copyright{ 
+        grid-area: footCopy; 
+        align-self: center;
+        justify-content: center;
+    } 
+}
+
+
+
+@media screen and (min-width: 768px){
+    .footer__container{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "footTitle "
+        "footSubscribe"
+        "footLogo "
+        "footSocial"
+        "footCopy "
+        ;
+    }
+}
+
 
 
 
@@ -1247,40 +1268,4 @@ padding-left: .5rem;
 };
 
 
-
-/* DO I even USE THIS?? */
-/* =============== MARGIN & PADDING  ================= */
-/* .GloMargin{
-    margin: 2rem 4rem;
-
-    @media screen and (min-width: 576px){
-        margin: 2.5rem 4.5rem;
-    };
-
-    @media screen and (min-width: 768px){
-        margin: 3.5rem 5.5rem;
-    };
-   
-    @media screen and (min-width: 992px){
-        margin: 4rem 6rem;
-    };
-}
-
-.GloPadding{
-    
-    padding: 2rem 2rem;
-
-   
-    @media screen and (min-width: 576px){
-        padding: 2.5rem 3rem;
-    }
-
-    @media screen and (min-width: 768px){
-        padding: 3rem 4.5rem;
-    }
-   
-    @media screen and (min-width: 992px){
-        padding: 4rem 5rem;
-    }
-} */
 
