@@ -871,21 +871,15 @@ padding-left: .5rem;
     flex-direction: column;
     align-items: center;
 }
+ 
 
 .room__container{
     width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: 
-    "roomBig"
-    "room1"
-    "room2"
-    "room3"
-    "room4"
-    ;
-    column-gap: 2rem;
-    row-gap: 2rem;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 2rem;
 }
 
 .room__card-big{ grid-area: roomBig; justify-self: center;}
@@ -947,6 +941,7 @@ padding-left: .5rem;
     position: relative;
     cursor: pointer;
     overflow: hidden;
+   
 }
 
 .room__card-small-data-container{
@@ -973,19 +968,9 @@ padding-left: .5rem;
 .room__card-title{}
 
 
-
-@media screen and (min-width: 413px){}
-
-@media screen and (min-width: 549px){}
-
-@media screen and (min-width: 576px){
-    
-
-}
-
-@media screen and (min-width: 768px){
-
+@media screen and (min-width: 729px){
     .room__container{
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
         "roomBig room1"
@@ -993,8 +978,9 @@ padding-left: .5rem;
         "room3 room4"
         ;
     }
+}
 
-    
+@media screen and (min-width: 768px){   
 }
 
 @media screen and (min-width: 992px){}
@@ -1025,27 +1011,188 @@ padding-left: .5rem;
     align-items: center;
 }
 
-@media screen and (min-width: 413px){}
-
-@media screen and (min-width: 549px){}
-
-@media screen and (min-width: 576px){}
-
-@media screen and (min-width: 768px){}
-
-@media screen and (min-width: 992px){}
-
-@media screen and (min-width: 1200px){}
-
-/* REVIEWS =========================================== */
-.reviews{
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    background: var(--color-bg-1);
+.reviews__container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 2rem;
+}
+.review__card{
+    width: 280px;
+    background: pink;
+    margin: 1rem 0;
+    padding: 4.25rem 1rem 1rem;
+    position: relative;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.review__card:nth-child(2){
+    margin-top: 4rem;
+}
+
+.review__card:nth-child(3){
+    margin-top: 4rem;
+}
+
+.review__card:hover {
+    scale: 1.1;
+}
+
+.review__card-img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: purple;
+    top: -25%;
+    transition: 0.4s ease-in-out;
+}
+
+.review__card:hover .review__card-img{
+    scale: 0.8;
+}
+
+
+.review__card-desc{
+    margin-bottom: 1rem;
+}
+.review__card-name{
+    font-size: var(--fz-normal);
+    font-weight: var(--fw-bold);
+}
+.review__card-location{
+    font-size: var(--fz-small);
+
+}
+
+
+@media screen and (min-width: 768px){
+    .reviews__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        row-gap: 3rem;
+    }
+
+    .review__card:nth-child(2){
+        margin-top: 1rem;
+    }
+    
+    .review__card:nth-child(3){
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .reviews__container{      
+        grid-template-columns: repeat(3, 1fr);  
+    }
+
+    .review__card:nth-child(3){
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 1200px){}
+
+/* FOOTER =========================================== */
+.footer{
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    background: var(--color-bg-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer title-------------- */
+.footer__title{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Footer Subscribe-------------- */
+
+.footer__subscribe{
+    margin-bottom: 2rem;
+    height: 2.3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: var(--color-bg-1);
+
+}
+
+.footer__input{
+    color: var(--color-text);
+    padding-left: 1rem;
+    background: none;
+    border: none;
+}
+
+.footer__input:focus{
+    outline: none;
+}
+
+.footer__button{
+    background: var(--color-brand);
+    border: none;
+    height: 100%;
+    width: 45%;
+    color: var(--color-white);
+    padding: 0 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer__button:hover {
+    background-color: var(--color-brand-dark);
+}
+
+/* Footer Copyright -------------- */
+
+.footer__copyrights{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__copyright-logo{
+    margin-bottom: 2rem;
+
+}
+
+.footer__copyright-detail{
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+
+.footer__copyright-socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__copyright-socials i{
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.footer__copyright-socials i:hover{
+    color: var(--color-brand);
+    scale: 1.2;
 }
 
 @media screen and (min-width: 413px){}
@@ -1063,7 +1210,7 @@ padding-left: .5rem;
 
 
 
-/* 1 section  ------------------------------------  */
+/* a section  ------------------------------------  */
 /* example =========================================== */
 .example{
     width: 100%;
