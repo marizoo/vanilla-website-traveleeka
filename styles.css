@@ -133,6 +133,7 @@ img{
 
 .section__titles{
     margin-bottom: 1.8rem;
+    align-self: flex-start;
 }
 
 .section__titles-title{
@@ -401,7 +402,7 @@ line-height: 400%;
 
 /* HERO ============================= */
 .hero{
-    height: 35vh;
+    height: 70vh;
     width: 100vw;
     background: rgba(240, 128, 128, 0.212);
     display: flex;
@@ -439,7 +440,7 @@ line-height: 400%;
 
 @media screen and (min-width: 413px){
     .hero{
-        height: 40vh;
+        height: 70vh;
     }
 
     .hero__data{
@@ -450,7 +451,7 @@ line-height: 400%;
 
 @media screen and (min-width: 576px){
     .hero{
-        height: 40vh;
+        height: 70vh;
     }
 
     .hero__data-title{
@@ -464,7 +465,7 @@ line-height: 400%;
 
 @media screen and (min-width: 768px){
     .hero{
-        height: 40vh;
+        height: 70vh;
     }
     
     .hero__data{
@@ -478,11 +479,11 @@ line-height: 400%;
 
 @media screen and (min-width: 992px){
     .hero{
-        height: 45vh;
+        height: 70vh;
     }
 
     .hero__data{
-        margin-top: 6rem;
+        margin-top: 4rem;
     }
 
     .hero__data-desc{
@@ -492,11 +493,11 @@ line-height: 400%;
 
 @media screen and (min-width: 1200px){
     .hero {
-        height: 40vh;
+        height: 70vh;
     }
 
     .hero__data{
-        margin-top: 8rem;
+        margin-top: 4rem;
     }
 
     .hero__data-desc{
@@ -645,12 +646,13 @@ padding-left: .5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 /* TRIP INFO */
 
 .trip__info-container{
-    background-color: pink;
     width: 100%;
     height: 100%;
     display: flex;
@@ -669,21 +671,48 @@ padding-left: .5rem;
 
 /* TRIP CARDS */
 .trip__cards-container{
-    background-color: lightblue;
     width: 100%;
     height: 100%;
+    /* display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+    "card1" 
+    "card2"
+    "card3"
+    ; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    
 }
+
+
+.trip-card1{
+    grid-area: card1;
+}
+
+.trip-card2{
+    grid-area: card2;
+}
+
+.trip-card3{
+    grid-area: card3;
+}
+
+.trip-card4{
+    grid-area: card4;
+}
+
+
 .trip__cards-card{
     height: 280px;
     width: 220px;
-    background: lightsalmon;
-    margin: 4rem 0 2rem;
+    margin: 2rem 0 1rem;
     position: relative;
     cursor: pointer;
+    background: var(--color-bg-2);
+    overflow: hidden;
 }
 .trip__card-img{
     width: 100%;
@@ -694,7 +723,7 @@ padding-left: .5rem;
     left: 0;
     z-index: 2;
     background: lightseagreen;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 .trip__cards-card:hover .trip__card-img{
@@ -705,7 +734,7 @@ padding-left: .5rem;
     position: absolute;
     bottom: 0;
     left: 0;
-    background: lightgray;
+    /* background: lightgray; */
     width: 100%;
     height:55px;
     display: grid;
@@ -760,24 +789,272 @@ padding-left: .5rem;
 @media screen and (min-width: 549px){}
 
 @media screen and (min-width: 576px){
+    .trip__cards-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "card1 card2"
+        "card3 card4"
+        ;
+        margin-top: 2.5rem;
+    }
+
     .trip__data-button{
-       
         justify-content: flex-start;
+    }
+
+    .trip__cards-container{
+       
+        margin-top: 2.5rem;
     }
 }
 
-/* TILL HERE!!! */
 
 @media screen and (min-width: 768px){
+
     .trip__data-desc{
         width: 80%;
     }
 
     .trip__cards-container{
-        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "card1 card2"
+        "card3 card4"
+        ;
+        margin-top: 2.5rem;
     }
+  
+}
+
+@media screen and (min-width: 992px){
+
+    .trip__data-desc{
+        width: 70%;
+    }
+
+    .trip__cards-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "card1 card2 card3"
+        "card4 . ."
+       
+        ;
+        margin-top: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .trip__data-desc{
+        width: 50%;
+    }
+
+    .trip__cards-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "card1 card2 card3 card4";
+        margin-top: 2.5rem;
+        column-gap: 3rem;
+    }
+}
+
+/* ROOM & SUITES =========================================== */
+.room{
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    background: var(--color-bg-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.room__container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+    "roomBig"
+    "room1"
+    "room2"
+    "room3"
+    "room4"
+    ;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.room__card-big{ grid-area: roomBig; justify-self: center;}
+.room-card1{ grid-area: room1; justify-self: center;}
+.room-card2{ grid-area: room2; justify-self: center;}
+.room-card3{ grid-area: room3; justify-self: center;}
+.room-card4{ grid-area: room4; justify-self: center;}
+
+/* Room card big ------- */
+
+.room__card-big{
+    width: 280px;
+    height: 438px;
+    background: lightsalmon;
+    position: relative;
+    cursor: pointer;
+}
+
+.room__card-big-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room__card-big-data-container{
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background: rgba(236, 236, 236, 0.171);
+    color: var(--color-white);
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    line-height: 135%;
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+.room__card-big:hover .room__card-big-data-container{
+    bottom: 0;
+} 
+
+.room__card-big-subtitle{}
+
+.room__card-big-title{
+    font-family: var(--font-family-narrow);
+}
+
+/* Room card small ------- */
+
+.room__card-small{
+    width: 280px;
+    height: 200px;
+    background: lightpink;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.room__card-small-data-container{
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: rgba(236, 236, 236, 0.171);
+    color: var(--color-white);
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    line-height: 125%;
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+.room__card-small:hover .room__card-small-data-container{
+    bottom: 0;
+}
+
+.room__card-img{}
+.room__card-subtitle{}
+.room__card-title{}
+
+
+
+@media screen and (min-width: 413px){}
+
+@media screen and (min-width: 549px){}
+
+@media screen and (min-width: 576px){
+    
+
+}
+
+@media screen and (min-width: 768px){
+
+    .room__container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "roomBig room1"
+        "roomBig room2"
+        "room3 room4"
+        ;
+    }
+
     
 }
+
+@media screen and (min-width: 992px){}
+
+@media screen and (min-width: 1200px){
+
+    .room__container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "roomBig room1 room2"
+        "roomBig room3 room4"
+        ;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+
+    
+}
+
+/* REVIEWS =========================================== */
+.reviews{
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    background: var(--color-bg-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 413px){}
+
+@media screen and (min-width: 549px){}
+
+@media screen and (min-width: 576px){}
+
+@media screen and (min-width: 768px){}
+
+@media screen and (min-width: 992px){}
+
+@media screen and (min-width: 1200px){}
+
+/* REVIEWS =========================================== */
+.reviews{
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    background: var(--color-bg-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 413px){}
+
+@media screen and (min-width: 549px){}
+
+@media screen and (min-width: 576px){}
+
+@media screen and (min-width: 768px){}
 
 @media screen and (min-width: 992px){}
 
@@ -786,7 +1063,17 @@ padding-left: .5rem;
 
 
 
-/* MEDIA QUERIES  ------------------------------------  */
+/* 1 section  ------------------------------------  */
+/* example =========================================== */
+.example{
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    background: var(--color-bg-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 @media screen and (min-width: 413px){}
 
 @media screen and (min-width: 549px){}
