@@ -359,7 +359,6 @@ line-height: 400%;
 .nav__link{
     transition: 0.3s;
     font-size: var(--fz-normal);
-    /* color: var(--color-bg-dark-text); */
     color: var(--color-bg-2);
 }
 
@@ -491,7 +490,7 @@ line-height: 400%;
     color: var(--color-text);
     max-width: 1200px;
     position: relative;
-    /* background: url('https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'); */
+    background: url('https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -505,7 +504,7 @@ line-height: 400%;
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to bottom, rgba(139, 139, 139, 0.507), rgba(36, 36, 36, 0.706));
+    background: linear-gradient(to bottom, rgba(65, 65, 65, 0.507), rgba(36, 36, 36, 0.706));
     z-index: -1;
 }
 
