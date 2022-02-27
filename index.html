@@ -4,6 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="./img/smiley.ico" type="image/x-icon" />
         <title>Traveleeka.</title>
         <!-- Boxicons -->
         <link
@@ -17,12 +19,14 @@
         <header id="header" class="header">
             <nav id="nav" class="nav nav__container">
                 <div class="nav__logo">
-                    Traveleeka<span class="nav__logo-dot">.</span>
+                    <a href="#hero">
+                        Traveleeka<span class="nav__logo-dot">.</span>
+                    </a>
                 </div>
                 <div class="nav__menu" id="nav-menu">
                     <div class="nav__list">
                         <p class="nav__item">
-                            <a class="nav__link" href="#home">Booking</a>
+                            <a class="nav__link" href="#booking">Booking</a>
                         </p>
                         <p class="nav__item">
                             <a class="nav__link" href="#packages">Packages</a>
@@ -63,11 +67,6 @@
                                 Explore the world
                             </p>
                         </div>
-                        <!-- <p class="hero__data-subtitle">Explore the world</p>
-                        <h2 class="hero__data-title">
-                            Dare to live the live <br />
-                            You've always wanted.
-                        </h2> -->
                         <p class="hero__data-desc">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Cumque sint quam quae ipsam eveniet, labore
@@ -169,7 +168,7 @@
 
             <!-- VIDEO -------------------->
             <!-- TRIP PACKAGES -------------------->
-            <section class="section trip">
+            <section id="packages" class="section trip">
                 <div class="trip__container">
                     <!-- INFO CARD 1 ---------------->
                     <div class="trip__info-container">
@@ -194,7 +193,11 @@
                     <div class="trip__cards-container">
                         <!-- TRIP CARD 1 ---------------->
                         <div class="trip__cards-card trip-card1">
-                            <div class="trip__card-img"></div>
+                            <img
+                                src="https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                alt="trip"
+                                class="trip__card-img"
+                            />
                             <div class="trip__card-data">
                                 <div class="trip__card-data-subtitle">
                                     Seminyak Haven
@@ -217,7 +220,11 @@
                         </div>
                         <!-- TRIP CARD 2 ---------------->
                         <div class="trip__cards-card trip-card2">
-                            <div class="trip__card-img"></div>
+                            <img
+                                src="https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                alt="trip"
+                                class="trip__card-img"
+                            />
                             <div class="trip__card-data">
                                 <div class="trip__card-data-subtitle">
                                     Groovy Canggu
@@ -239,7 +246,11 @@
                         </div>
                         <!-- TRIP CARD 3 ---------------->
                         <div class="trip__cards-card trip-card3">
-                            <div class="trip__card-img"></div>
+                            <img
+                                src="https://images.pexels.com/photos/3889843/pexels-photo-3889843.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                alt="trip"
+                                class="trip__card-img"
+                            />
                             <div class="trip__card-data">
                                 <div class="trip__card-data-subtitle">
                                     Jungle Bliss
@@ -262,7 +273,11 @@
                         </div>
                         <!-- TRIP CARD 4 ---------------->
                         <div class="trip__cards-card trip-card4">
-                            <div class="trip__card-img"></div>
+                            <img
+                                src="https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                alt="trip"
+                                class="trip__card-img"
+                            />
                             <div class="trip__card-data">
                                 <div class="trip__card-data-subtitle">
                                     Fun Yurt
@@ -288,7 +303,7 @@
                 </div>
             </section>
             <!-- ROOM & SUITES -------------------->
-            <section class="section room">
+            <section id="rooms" class="section room">
                 <div class="section__titles">
                     <h2 class="section__titles-title">Room & Suites</h2>
                     <p class="section__titles-subtitle">
@@ -298,7 +313,11 @@
                 <div class="room__container">
                     <!-- Room Card Big-->
                     <div class="room__card-big">
-                        <div class="room__card-big-img"></div>
+                        <img
+                            src="https://images.pexels.com/photos/3951743/pexels-photo-3951743.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt="rooms"
+                            class="room__card-big-img"
+                        />
                         <div class="room__card-big-data-container">
                             <p class="room__card-big-subtitle">Exclusive</p>
                             <p class="room__card-big-title">Modern & comfort</p>
@@ -306,41 +325,57 @@
                     </div>
                     <!-- Room Card Small 1-->
                     <div class="room__card-small room-card1">
-                        <div class="room__card-img"></div>
+                        <img
+                            src="https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt="rooms"
+                            class="room__card-img"
+                        />
                         <div class="room__card-small-data-container">
-                            <p class="room__card-subtitle">Blabla</p>
-                            <p class="room__card-title">Butterscotch Muffin</p>
+                            <p class="room__card-subtitle">Rustic</p>
+                            <p class="room__card-title">Family comfort</p>
                         </div>
                     </div>
                     <!-- Room Card Small 2-->
                     <div class="room__card-small room-card2">
-                        <div class="room__card-img"></div>
+                        <img
+                            src="https://images.pexels.com/photos/237371/pexels-photo-237371.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt="rooms"
+                            class="room__card-img"
+                        />
                         <div class="room__card-small-data-container">
-                            <p class="room__card-subtitle">Blabla</p>
-                            <p class="room__card-title">Butterscotch Muffin</p>
+                            <p class="room__card-subtitle">Hybrid</p>
+                            <p class="room__card-title">Modern & cozy</p>
                         </div>
                     </div>
                     <!-- Room Card Small 3-->
                     <div class="room__card-small room-card3">
-                        <div class="room__card-img"></div>
+                        <img
+                            src="https://images.pexels.com/photos/1879061/pexels-photo-1879061.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt="rooms"
+                            class="room__card-img"
+                        />
                         <div class="room__card-small-data-container">
-                            <p class="room__card-subtitle">Blabla</p>
-                            <p class="room__card-title">Butterscotch Muffin</p>
+                            <p class="room__card-subtitle">Rustic</p>
+                            <p class="room__card-title">Cozy & Romantic</p>
                         </div>
                     </div>
                     <!-- Room Card Small 4-->
                     <div class="room__card-small room-card4">
-                        <div class="room__card-img"></div>
+                        <img
+                            src="https://images.pexels.com/photos/2747901/pexels-photo-2747901.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt="rooms"
+                            class="room__card-img"
+                        />
                         <div class="room__card-small-data-container">
-                            <p class="room__card-subtitle">Blabla</p>
-                            <p class="room__card-title">Butterscotch Muffin</p>
+                            <p class="room__card-subtitle">Modern</p>
+                            <p class="room__card-title">Exlusive Apartment</p>
                         </div>
                     </div>
                     <!-- End of Room Card -->
                 </div>
             </section>
             <!-- REVIEWS -------------------->
-            <section class="section reviews">
+            <section id="reviews" class="section reviews">
                 <div class="section__titles">
                     <h2 class="section__titles-title">Traveller's Stories</h2>
                     <p class="section__titles-subtitle">
@@ -350,38 +385,55 @@
                 <div class="reviews__container">
                     <!-- review card 1 -->
                     <div class="review__card">
-                        <div class="review__card-img"></div>
+                        <img
+                            src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt="user reviews"
+                            class="review__card-img"
+                        />
                         <div class="review__card-desc">
                             Lorem ipsum, sit amet consectetur adipisicing elit.
                             Tenetur nesciunt modi obcaecati!
                         </div>
-                        <div class="review__card-name">Bob Marley</div>
+                        <div class="review__card-name">Bobbie Marley</div>
                         <div class="review__card-location">Chicago</div>
                     </div>
                     <!-- review card 2 -->
                     <div class="review__card">
-                        <div class="review__card-img"></div>
+                        <img
+                            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt="user reviews"
+                            class="review__card-img"
+                        />
                         <div class="review__card-desc">
                             Lorem ipsum, sit amet consectetur adipisicing elit.
                             Tenetur nesciunt modi obcaecati!
                         </div>
-                        <div class="review__card-name">Bob Marley</div>
-                        <div class="review__card-location">Chicago</div>
+                        <div class="review__card-name">Casey Morgan</div>
+                        <div class="review__card-location">New Orleans</div>
                     </div>
                     <!-- review card 3 -->
                     <div class="review__card">
-                        <div class="review__card-img"></div>
+                        <img
+                            src="https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt="user reviews"
+                            class="review__card-img"
+                        />
                         <div class="review__card-desc">
                             Lorem ipsum, sit amet consectetur adipisicing elit.
                             Tenetur nesciunt modi obcaecati!
                         </div>
-                        <div class="review__card-name">Bob Marley</div>
-                        <div class="review__card-location">Chicago</div>
+                        <div class="review__card-name">Maggie Fern</div>
+                        <div class="review__card-location">Kentucky</div>
                     </div>
 
                     <!-- review card end -->
                 </div>
             </section>
+
+            <!-- SCROLLUP ------------ -->
+            <a class="scrollup" id="scroll-up" href="#hero">
+                <i class="bx bx-up-arrow-alt"></i>
+            </a>
         </main>
 
         <!-- FOOTER -------------------->
@@ -410,11 +462,19 @@
                 </div>
                 <div class="footer__copyright">
                     <p>&#128526; Designed by Marizoo</p>
-                    <p>&copy; All Rights Reserved</p>
+                    <p>2022 &copy; All Rights Reserved</p>
                 </div>
             </div>
         </footer>
 
+        <!--MIXITUP FILTER ----------- -->
+        <script src="./mixItUp.min.js"></script>
+
+        <!-- main JS -->
         <script src="app.js"></script>
     </body>
 </html>
+
+<!--? WHY WON'T IT WORK?  -->
+<!-- Active Link thingy ??? -->
+<!-- add the JS animation on scroll -->

@@ -17,6 +17,8 @@
 --color-text: #707070;
 --color-bg-1: #f8f8f8;
 --color-bg-2: #f0efef;
+--color-bg-dark: #1d1d1d;
+--color-bg-dark-text: #d8d7d7;
 
 /* ----- Font Weight ----- */
     --fw-medium: 500;
@@ -58,6 +60,8 @@ body.dark-theme{
 --color-text: #C7D1CC;
 --color-bg-1: #171d1a;
 --color-bg-2: #101412;
+--color-bg-dark: #d8d8d8;
+--color-bg-dark-text: #1d1d1d;
 }
 
 
@@ -80,6 +84,9 @@ body{
     background-color: var(--color-body);
     color: var(--color-text);
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 ul{
@@ -88,6 +95,8 @@ ul{
 a{
     text-decoration: none;
     color: var(--color-text);
+    cursor: pointer;
+    color: inherit;
 }
 img{
     max-width: 100%;
@@ -128,7 +137,8 @@ img{
 
 /* SECTION BASE STYLING --------------------------------- */
 .section{
-    padding: 5.5rem 2rem;    
+    padding: 5.5rem 2rem;   
+    position: relative;
 }
 
 .section__titles{
@@ -195,11 +205,20 @@ img{
 
 
 /*=============== SCROLL UP ===============*/
+.scrollup__container{
+    position: fixed;
+    right: 5rem;
+    /* bottom: 5rem; */
+    bottom: 5rem;
+    width: 100px;
+    height: 100px;
+
+}
 .scrollup{
     position: fixed;
     right: 1rem;
-    /* bottom: 5rem; */
-    bottom: -30%;
+    /* bottom: 5rem;  */
+    bottom: -30%; 
     background-color: var(--color-brand);
     box-shadow: 0 4px 12px hsla(206, 4%, 20%, .1);
     display: inline-flex;
@@ -217,10 +236,34 @@ img{
     opacity: 1;
 }
 
-/* Show Scroll Up*/
+/* Show Scroll Up */
 .show-scroll{
     bottom: 5rem;
 }
+
+
+/* Change Header's background color as you scroll */
+.scroll-header{
+    background: var(--color-bg-dark); 
+    box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
+    transition: all 0.3s ease;
+ }
+ 
+ .scroll-header .nav__logo,
+ .scroll-header .nav__toggle{
+     color: var(--color-bg-dark-text);
+ }
+ 
+ /* .scroll-header .nav__logo-img{
+     mix-blend-mode: difference;
+ } */
+ 
+ 
+ /* Active link */
+ .active-link{
+     color: var(--color-brand);
+ }
+ 
 
 
 /* EDITING STARTS BELOW =========================================== */
@@ -229,14 +272,14 @@ img{
 
 .header{
     width: 100vw;
-    background: var(--color-bg-2);
     position: fixed;
     top: 0;
-    left: 0;
     z-index: var(--z-fixed);
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 1200px;
+    transition: all 0.3s ease;
 }
 
 .nav__container{
@@ -248,7 +291,6 @@ img{
 }
 
 .nav__logo{
-    color: var(--color-text);
     font-size: var(--fz-h2);
     display: flex;
     align-items: center;
@@ -257,7 +299,12 @@ img{
     height: 100%;
     text-transform: uppercase;
     letter-spacing: 1px;
+    z-index: 11;
+    cursor: pointer;
+    color: var(--color-bg-dark-text);
+    /* color: var(--color-bg-2); */
 }
+
 
 .nav__logo-dot{
     color: var(--color-brand);
@@ -269,7 +316,7 @@ img{
 .nav__toggle{
     font-size: 1.15rem;
     cursor: pointer;
-    color: var(--color-text);
+    color: var(--color-bg-dark-text);
     display: flex;
     align-items: center;
 }
@@ -282,13 +329,17 @@ img{
     height: 100%;
     width: 100%;
     transition: 0.3s;
-    background-color: var(--color-bg-2);
-    color: var(--color-text-light);
+    /* background-color: var(--color-bg-2); */
+    background-color: var(--color-bg-dark);
+    color: var(--color-bg-dark-text);
+    /* color: var(--color-bg-2); */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     z-index: var(--z-fixed);
+    max-width: 1200px;
+
 }
 
 .show-menu{
@@ -308,6 +359,8 @@ line-height: 400%;
 .nav__link{
     transition: 0.3s;
     font-size: var(--fz-normal);
+    /* color: var(--color-bg-dark-text); */
+    color: var(--color-bg-2);
 }
 
 .nav__link:hover{
@@ -324,7 +377,7 @@ line-height: 400%;
 }
 
 .nav__close:hover{
-    color: var()--color-brand;
+    color: var(--color-brand);
 }
 
 .nav__theme{
@@ -401,7 +454,33 @@ line-height: 400%;
     } 
 }
 
-/* HERO ============================= */
+
+/* Change Header's background color as you scroll ============ */
+.scroll-header{
+    background: var(--color-bg-dark); 
+    box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
+    transition: all 0.3s ease;
+ }
+ 
+ .scroll-header .nav__logo,
+ .scroll-header .nav__toggle{
+     /* color: var(--color-bg-dark-text); */
+     color: var(--color-bg-2);
+ }
+ 
+ /* .scroll-header .nav__logo-img{
+     mix-blend-mode: difference;
+ } */
+ 
+ 
+ /* Active link on nav__menu ---------------------------------------*/
+ .active-link{
+     color: var(--color-brand);
+ }
+ 
+
+
+/* HERO =============================================== */
 .hero{
     height: 50vh;
     width: 100%;
@@ -410,7 +489,26 @@ line-height: 400%;
     align-items: center;
     justify-content: center;
     color: var(--color-text);
+    max-width: 1200px;
+    position: relative;
+    /* background: url('https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
+
+.hero::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(139, 139, 139, 0.507), rgba(36, 36, 36, 0.706));
+    z-index: -1;
+}
+
 
 .hero__container{
     width: 100%;
@@ -489,7 +587,7 @@ line-height: 400%;
 /* BOOKING ============================= */
 .booking{
     background: var(--color-bg-2);
-    
+    max-width: 1200px;
 }
 
 .booking__container{
@@ -689,7 +787,7 @@ padding-left: .5rem;
     top: 0;
     left: 0;
     z-index: 2;
-    background: lightseagreen;
+    background: rgba(32, 178, 171, 0.322);
     transition: 0.4s ease-in-out;
 }
 
@@ -749,10 +847,6 @@ padding-left: .5rem;
     font-family: var(--font-family-narrow);
 }
 
-
-@media screen and (min-width: 413px){}
-
-@media screen and (min-width: 549px){}
 
 @media screen and (min-width: 576px){
     .trip__cards-container{
@@ -909,6 +1003,7 @@ padding-left: .5rem;
     position: relative;
     cursor: pointer;
     overflow: hidden;
+
 }
 
 .room__card-small-data-container{
@@ -930,7 +1025,14 @@ padding-left: .5rem;
     bottom: 0;
 }
 
-.room__card-img{}
+.room__card-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .room__card-subtitle{}
 .room__card-title{}
 
@@ -947,10 +1049,6 @@ padding-left: .5rem;
     }
 }
 
-@media screen and (min-width: 768px){   
-}
-
-@media screen and (min-width: 992px){}
 
 @media screen and (min-width: 1200px){
 
@@ -986,7 +1084,7 @@ padding-left: .5rem;
 }
 .review__card{
     width: 280px;
-    background: pink;
+    background: var(--color-bg-2);
     margin: 1rem 0;
     padding: 4.25rem 1rem 1rem;
     position: relative;
@@ -1011,9 +1109,10 @@ padding-left: .5rem;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: purple;
+    background-color: lightsalmon;
     top: -25%;
     transition: 0.4s ease-in-out;
+    object-fit: cover;
 }
 
 .review__card:hover .review__card-img{
@@ -1023,6 +1122,7 @@ padding-left: .5rem;
 
 .review__card-desc{
     margin-bottom: 1rem;
+    font-style: italic;
 }
 .review__card-name{
     font-size: var(--fz-normal);
@@ -1061,7 +1161,6 @@ padding-left: .5rem;
     }
 }
 
-@media screen and (min-width: 1200px){}
 
 /* FOOTER =========================================== */
 .footer{
@@ -1233,7 +1332,7 @@ padding-left: .5rem;
 
 /* a section  ------------------------------------  */
 /* example =========================================== */
-.example{
+/* .example{
     width: 100%;
     max-width: 1200px;
     height: 100%;
@@ -1257,7 +1356,7 @@ padding-left: .5rem;
 @media screen and (min-width: 1400px) {}
 
 /* Alternative code, for larger screens */
-@media screen and (min-width: 1700px){
+/* @media screen and (min-width: 1700px){
 
     section{
         max-width: 1400px;
@@ -1265,7 +1364,7 @@ padding-left: .5rem;
         margin-right: auto;
     }
 
-};
+};  */
 
 
 
